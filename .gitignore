@@ -1,0 +1,283 @@
+# =============================================================================
+# ROS2 Gazebo 项目 .gitignore 文件
+# =============================================================================
+
+# ================================
+# ROS2 构建相关文件
+# ================================
+# 工作空间构建目录
+build/
+install/
+log/
+logs/
+
+# Colcon 构建文件
+.colcon_install_layout
+.colcon_build_cache
+
+# ROS1 兼容性文件
+devel/
+.catkin_workspace
+
+# ================================
+# 编译产物和缓存
+# ================================
+# C++ 编译产物
+*.o
+*.so
+*.a
+*.dylib
+*.exe
+*.out
+
+# CMake 文件
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ================================
+# Gazebo 和仿真相关
+# ================================
+# World 文件（通常比较大）
+# /*.world  # 不要全局忽略所有world文件
+*.world~
+*.world.backup
+
+# 特别忽略大的world文件
+src/gazebo_ackermann_steering_vehicle/worlds/cafe2.world
+src/gazebo_ackermann_steering_vehicle/worlds/my.world
+
+# Gazebo 模型缓存
+.gazebo/
+~/.gazebo/models/
+
+# 仿真数据和日志
+*.bag
+*.bag.orig
+*.bag.active
+*.rosbag
+*.db3
+*.mcap
+
+# SLAM地图数据（通常很大）
+*.data
+*.posegraph
+map/slam_map_serial.*
+*/map/slam_map_serial.*
+
+# ================================
+# 媒体文件（通常很大）
+# ================================
+# 图像文件
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.svg
+*.raw
+
+# 视频文件
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.mkv
+*.webm
+*.m4v
+
+# 音频文件
+*.wav
+*.mp3
+*.ogg
+*.flac
+*.aac
+
+# 3D 模型文件
+*.stl
+*.obj
+*.ply
+*.dae
+*.collada
+*.urdf.backup
+*.glb
+*.gltf
+*.fbx
+*.blend
+
+# 网格模型目录（通常包含大文件）
+meshes/
+*/meshes/
+
+# ================================
+# IDE 和编辑器文件
+# ================================
+# VSCode (保留settings.json，忽略其他)
+.vscode/*
+!.vscode/settings.json
+*.code-workspace
+
+# CLion / IntelliJ
+.idea/
+cmake-build-*/
+
+# Eclipse CDT
+.project
+.cproject
+.settings/
+
+# Qt Creator
+*.user
+*.pro.user
+*.pri.user
+qtcreator-*
+
+# Vim/Neovim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ================================
+# 系统和临时文件
+# ================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+.Trash-*
+
+# 临时文件
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+
+# ================================
+# Docker 相关
+# ================================
+# Docker 构建缓存
+.dockerignore
+docker-compose.override.yml
+
+# ================================
+# 证书和密钥（安全相关）
+# ================================
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.jks
+
+# ================================
+# 数据库文件
+# ================================
+*.sqlite
+*.sqlite3
+*.db
+
+# ================================
+# 压缩文件（通常较大）
+# ================================
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.7z
+*.rar
+
+# ================================
+# 自定义大文件类型
+# ================================
+# 点云数据
+*.pcd
+*.las
+*.laz
+
+# 机器学习模型
+*.h5
+*.pb
+*.onnx
+*.pt
+*.pth
+*.pkl
+*.pickle
+
+# 数据集
+/datasets/
+/data/
+*.csv
+*.json
+*.xml
+*.yaml.large
+
+# ================================
+# ROS2 Gazebo 项目特定大文件
+# ================================
+# Frame数据（tf树记录）
+frame/
+*/frame/
+
+# 生成的地图文件
+map/*.pgm
+map/*.yaml
+*/map/*.pgm
+*/map/*.yaml
+
+# 大型world文件和模型
+worlds/coffee/
+*/worlds/coffee/
+
+# VSCode设置（但保留基本配置）
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/c_cpp_properties.json
+
+# ================================
+# 项目特定忽略
+# ================================
+# 用户自定义配置
+config/user_config.yaml
+config/local_settings.yaml
+
+# 测试输出
+test_output/
+test_results/
+
+# 文档生成
+docs/_build/
+docs/html/
+docs/latex/
