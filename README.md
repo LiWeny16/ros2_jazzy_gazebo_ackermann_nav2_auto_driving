@@ -12,6 +12,14 @@ This project is an enhanced version of the Ackermann steering vehicle simulation
 - ✅ **Custom navigation parameters** - Fine-tuned for Ackermann vehicle constraints
 - ✅ **SLAM integration** - Ready-to-use mapping and localization
 
+## Simulation Preview / 仿真演示
+
+![Gazebo simulation and RViz2 map with a planned navigation path](docs/images/ros2-gazebo-nav2.png)
+
+Gazebo shows the simulated vehicle and environment on the left; RViz2 shows the map and navigation path on the right. This is a screenshot of the simulation.
+
+左侧为 Gazebo 中的车辆与场景，右侧为 RViz2 中的地图和导航路径。该画面为仿真截图。
+
 ## 🎯 Main Improvements
 
 ### 1. **Enhanced Vehicle Control**
@@ -52,7 +60,7 @@ sudo apt install -y \
 ### Clone the Repository
 ```bash
 cd <your_workspace>/src
-git clone <your-repo-url>
+git clone https://github.com/LiWeny16/ros2_jazzy_gazebo_ackermann_nav2_auto_driving.git
 cd ..
 ```
 
